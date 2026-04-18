@@ -182,7 +182,6 @@ One command activates the full workflow. No need to paste long text.
 | Chinese support | ❌ | ❌ | ❌ | ✅ | Zero barrier for Chinese users |
 | Learning curve | Low | High | Low | Low | Easy to get started |
 | Focus area | — | Full dev lifecycle | Execution only | Idea → Shipped | End-to-end from idea to product |
-| Focus | — | Full dev lifecycle | Execution only | Idea → Shipped | |
 
 **vs. competitors:** superpowers is too broad, get-shit-done skips planning — idea-to-product sits in the middle with a complete end-to-end path.
 

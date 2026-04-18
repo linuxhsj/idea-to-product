@@ -97,7 +97,7 @@ That's it. The AI will guide you through the steps.
 | Clarify requirements | ❌ | ❌ | ❌ | ✅ Step 2 | Know what to build — no rework |
 | Research competitors | ❌ | ❌ | ❌ | ✅ Step 3 | Don't build what already exists |
 | UI design规范 | ❌ | ⚠️ | ❌ | ✅ awesome-design | Professional-looking UI |
-| Testing required | ❌ | ⚠️ | ❌ | ✅ TDD + E2E | Ship with confidence |
+| Testing required | ❌ | ⚠️ | ❌ | ✅ TDD + E2E | Ship with confidence, quality guaranteed |
 | Chinese support | ❌ | ❌ | ❌ | ✅ | Zero barrier for Chinese users |
 | Learning curve | Low | High | Low | Low | |
 | Focus | — | Full dev lifecycle | Execution only | Idea → Shipped | |

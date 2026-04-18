@@ -34,8 +34,8 @@ Errors → Ugly UI → More fixes → Give up
 │  2. Clarify requirements  ← HARD-GATE       │
 │       (brainstorm追问)                       │
 │              ↓                               │
-│  3. Research competitors                     │
-│       (GitHub + Web search)                  │
+│  3. Deep competitor research                │
+│       (Clone repos, run, study code)         │
 │              ↓                               │
 │  4. Design UI  (awesome-design规范)          │
 │              ↓                               │
@@ -56,11 +56,11 @@ Errors → Ugly UI → More fixes → Give up
 | Step | What | Tool |
 |------|------|------|
 | 1 | Check if free tools already exist | claude.ai / doubao.com |
-| 2 | Clarify who/what/success criteria — write it down | `/superpowers:brainstorm` |
-| 3 | Search GitHub + web for similar projects | Web search |
-| 4 | Apply design spec + 3-click UX rule | awesome-design |
-| 5 | Break into 2-5 min tasks — you approve | `/superpowers:write-plan` |
-| 6 | AI does one task → you confirm → next | `/superpowers:execute-plan` |
+| 2 | Clarify who/what/success — write `PROJECT.md` | `/superpowers:brainstorm` |
+| 3 | Clone top repos, run them, study code deeply | Git + Web search |
+| 4 | Apply design spec + Do's & Don'ts | awesome-design |
+| 5 | Break into tasks with `verify:` field — you approve | `/superpowers:write-plan` |
+| 6 | AI does one task → run verify → you confirm → next | `/superpowers:execute-plan` |
 | 7 | Write test rules first, then run full flow | TDD + E2E |
 
 ---
@@ -119,25 +119,41 @@ The AI doesn't start coding immediately. It asks questions first.
 **Example — "I want to build a Pomodoro timer":**
 
 ```
-AI: "Before I start building — a few quick questions:
+AI: "Before I start — a few questions:
   1. Is this for personal use or a team?
   2. What problem does it solve for you?
-  3. What does success look like?
-     (Does it need history? Notifications? Export?)"
+  3. What does success look like?"
 
 You: Answer the questions
 
-AI: "Got it. Here's what I understand you need:
-  [Requirements doc — read and confirm]"
-
+AI: "Got it. Here's what I understand: [Requirements doc]"
 You: Confirm or correct
 
-AI: "Now let me search for existing solutions..."
+AI: "Now let me research competitors. I'll clone the top 2 repos
+  and study what they do well and what they don't..."
 
-...and so on, step by step.
+AI: "After running Forest and Pomodoro.js:
+  - Forest: Beautiful UI ✅, no history ❌ → borrow the timer UX
+  - Pomodoro.js: Has history ✅, ugly UI ❌ → skip its design
+  Here's my learnings table: [table]"
+
+You: Confirm the learnings
+
+AI: "Now designing the UI based on awesome-design specs..."
+You: Review and confirm
+
+AI: "Here's the task breakdown with verify fields:
+  [Task 1: install deps — verify: npm install succeeds]
+  [Task 2: timer core — verify: clicking start shows countdown]
+  ..."
+
+You: Approve plan
+
+AI: [Executes task 1, runs verify, shows result, waits for confirm]
+...and so on.
 ```
 
-You stay in control. AI asks → you answer → AI does → you confirm.
+You stay in control. AI asks → you answer → AI researches → you confirm → AI builds.
 
 ---
 

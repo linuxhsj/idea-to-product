@@ -1,0 +1,18 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Sensitive files (已确认为敏感，不上传)
+code\ 0302.txt
+com.360.browser-stable.desktop
+bug3.txt
+未命名文档2.txt
+deepseek写的方法论.txt
+方法论.txt
+
+# Screenshots
+截图*.png
+
+# Temporary
+*.tmp
+*.swp

@@ -92,14 +92,17 @@ That's it. The AI will guide you through the steps.
 
 ## What Makes This Different
 
-| | Raw AI | This method |
-|---|---|---|
-| Starts coding | Immediately | After you approve the plan |
-| Requirements | "I'll figure it out" | AI追问, you confirm |
-| UI | AI does whatever | awesome-design规范 |
-| Tasks | One big prompt | 2-5 min steps, visible progress |
-| Testing | Skipped | TDD + E2E every step |
-| Result | Broken / ugly | Shipped + tested |
+| | Raw AI | superpowers | get-shit-done | idea-to-product |
+|---|---|---|---|---|
+| Clarify requirements | ❌ | ❌ | ❌ | ✅ Step 2 |
+| Research competitors | ❌ | ❌ | ❌ | ✅ Step 3 |
+| UI design规范 | ❌ | ⚠️ | ❌ | ✅ awesome-design |
+| Testing required | ❌ | ⚠️ | ❌ | ✅ TDD + E2E |
+| Chinese support | ❌ | ❌ | ❌ | ✅ |
+| Learning curve | Low | High | Low | Low |
+| Focus | — | Full dev lifecycle | Execution only | Idea → Shipped |
+
+**vs. competitors:** superpowers is too broad, get-shit-done skips planning — idea-to-product sits in the middle with a complete end-to-end path.
 
 ---
 

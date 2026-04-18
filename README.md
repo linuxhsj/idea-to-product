@@ -56,10 +56,10 @@ Errors → Ugly UI → More fixes → Give up
 | Step | What | Tool |
 |------|------|------|
 | 1 | Check if free tools already exist | claude.ai / doubao.com |
-| 2 |追问 who/what/success — write it down | `/superpowers:brainstorm` |
+| 2 | Clarify who/what/success criteria — write it down | `/superpowers:brainstorm` |
 | 3 | Search GitHub + web for similar projects | Web search |
-| 4 | Apply design规范 + 3-click UX rule | awesome-design |
-| 5 |拆成 2-5 min tasks — you approve | `/superpowers:write-plan` |
+| 4 | Apply design spec + 3-click UX rule | awesome-design |
+| 5 | Break into 2-5 min tasks — you approve | `/superpowers:write-plan` |
 | 6 | AI does one task → you confirm → next | `/superpowers:execute-plan` |
 | 7 | Write test rules first, then run full flow | TDD + E2E |
 

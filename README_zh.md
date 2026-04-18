@@ -180,7 +180,8 @@ AI: [执行任务1，跑 verify，展示结果，等你确认]
 | UI 规范 | ❌ | ⚠️ | ❌ | ✅ awesome-design | 界面专业好看 |
 | 测试要求 | ❌ | ⚠️ | ❌ | ✅ TDD + E2E | 上线有信心，质量有保证 |
 | 中文支持 | ❌ | ❌ | ❌ | ✅ | 中文用户零门槛 |
-| 上手难度 | 低 | 高 | 低 | 低 | |
+| 上手难度 | 低 | 高 | 低 | 低 | 易于上手 |
+| 专注领域 | — | 全阶段开发 | 执行阶段 | 想法→产品全链路 | 从想法到产品的完整路径 |
 | 专注领域 | — | 全阶段开发 | 执行阶段 | 想法→产品全链路 | |
 
 **竞品定位：** superpowers 太重，get-shit-done 缺少规划 —— idea-to-product 刚好在中间，完整但不复杂。
@@ -201,20 +202,6 @@ AI: [执行任务1，跑 verify，展示结果，等你确认]
 | 任意 AI 工具 | 复制 SKILL.md，粘贴进对话 |
 
 > **无需安装**，粘贴即用。
-
----
-
-## 引用工具
-
-| 工具 | 用途 |
-|------|------|
-| `/superpowers:brainstorm` | 追问需求、澄清问题 |
-| `/superpowers:write-plan` | 把需求拆成 2-5 分钟的小任务 |
-| `/superpowers:execute-plan` | 分步执行，每步确认 |
-| [awesome-design](https://github.com/VoltAgent/awesome-design-md) | AI UI 设计规范，让 AI 输出专业界面 |
-| [Claude](https://claude.ai) | 联网搜索 + 竞品调研 |
-| [豆包](https://doubao.com) | 中文联网搜索 + 竞品调研 |
-| [Superpowers](https://github.com/obra/superpowers) | 本方法论构建在其之上 |
 
 ---
 

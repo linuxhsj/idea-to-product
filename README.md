@@ -180,7 +180,8 @@ One command activates the full workflow. No need to paste long text.
 | UI design规范 | ❌ | ⚠️ | ❌ | ✅ awesome-design | Professional-looking UI |
 | Testing required | ❌ | ⚠️ | ❌ | ✅ TDD + E2E | Ship with confidence, quality guaranteed |
 | Chinese support | ❌ | ❌ | ❌ | ✅ | Zero barrier for Chinese users |
-| Learning curve | Low | High | Low | Low | |
+| Learning curve | Low | High | Low | Low | Easy to get started |
+| Focus area | — | Full dev lifecycle | Execution only | Idea → Shipped | End-to-end from idea to product |
 | Focus | — | Full dev lifecycle | Execution only | Idea → Shipped | |
 
 **vs. competitors:** superpowers is too broad, get-shit-done skips planning — idea-to-product sits in the middle with a complete end-to-end path.
@@ -199,20 +200,6 @@ Any AI coding tool that supports skills, slash commands, or system instructions.
 | Trae | Settings → AI → System Instructions → paste SKILL.md |
 | Windsurf | Settings → Workspace → paste SKILL.md |
 | Any AI | Copy SKILL.md, paste as first message |
-
----
-
-## Referenced Tools
-
-| Tool | Use for |
-|------|---------|
-| `/superpowers:brainstorm` | Clarify requirements |
-| `/superpowers:write-plan` | Break into tasks |
-| `/superpowers:execute-plan` | Execute step-by-step |
-| [awesome-design](https://github.com/VoltAgent/awesome-design-md) | Professional UI design |
-| [Claude](https://claude.ai) | Competitor research |
-| [Doubao](https://doubao.com) | Chinese competitor research |
-| [Superpowers](https://github.com/obra/superpowers) | Skills framework this is built on |
 
 ---
 

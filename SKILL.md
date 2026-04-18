@@ -288,13 +288,3 @@ These thoughts mean **delete everything and restart**:
 | "I'll do all features at once" | Batching features = no testing, no rollback, no idea what broke |
 | "The UI is fine, I'll fix it later" | UI debt compounds. Fix it in Step 4, not Step 7 |
 
-## Referenced Tools
-
-| Tool | Use for |
-|------|---------|
-| `/superpowers:brainstorm` | Requirements clarification |
-| `/superpowers:write-plan` | Task decomposition |
-| `/superpowers:execute-plan` | Step-by-step execution |
-| awesome-design | UI design规范 |
-| Claude/Doubao web search | Quick tool search (Step 1 only) |
-| Git (clone + run) | Deep competitor research (Step 3) |

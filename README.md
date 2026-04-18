@@ -31,7 +31,7 @@ Errors → Ugly UI → More fixes → Give up
 │  1. Existing tool?  ── Yes → Done          │
 │       No / too expensive                     │
 │              ↓                               │
-│  2. Clarify requirements  ← HARD-GATE        │
+│  2. Clarify requirements  ← HARD-GATE       │
 │       (brainstorm追问)                       │
 │              ↓                               │
 │  3. Research competitors                     │
@@ -39,13 +39,13 @@ Errors → Ugly UI → More fixes → Give up
 │              ↓                               │
 │  4. Design UI  (awesome-design规范)          │
 │              ↓                               │
-│  5. Break into tasks  ← /write-plan         │
+│  5. Break into tasks  ← /write-plan          │
 │       (2-5 min per step)                     │
 │              ↓                               │
-│  6. Execute step-by-step ← /execute-plan    │
+│  6. Execute step-by-step ← /execute-plan     │
 │       (confirm each step)                    │
 │              ↓                               │
-│  7. Test  (TDD + E2E)                       │
+│  7. Test  (TDD + E2E)                        │
 │              ↓                               │
 │          Ship ✅                             │
 └─────────────────────────────────────────────┘
@@ -75,18 +75,68 @@ The order IS the method. Not optional.
 
 ## Quick Start
 
-**1 minute to activate:**
+**Step 1 — Install (30 seconds)**
+
+| Tool | Where to put SKILL.md |
+|------|-----------------------|
+| Claude Code | `~/.claude/skills/idea-to-product/SKILL.md` |
+| OpenClaw | `~/.openclaw/skills/idea-to-product/SKILL.md` |
+| Cursor | Settings → Rules → paste SKILL.md content |
+| Trae | Settings → AI → System Instructions → paste SKILL.md |
+| Windsurf | Settings → Workspace → paste SKILL.md |
+| Any AI | Copy SKILL.md, paste as your first message |
+
+**Step 2 — Activate**
+
+Open any tool above and paste:
 
 ```
-Open: Claude Code / OpenClaw / Cursor / Trae / Windsurf
-
-Paste this as your first message:
-
-  Follow the idea-to-product skill.
-  My idea: [describe what you want to build]
-
-That's it. The AI will guide you through the steps.
+Follow the idea-to-product skill.
+My idea: [describe what you want to build]
 ```
+
+That's it. The AI will guide you through every step.
+
+---
+
+## What Happens After You Activate
+
+The AI doesn't start coding immediately. It asks questions first.
+
+**Example — "I want to build a Pomodoro timer":**
+
+```
+AI: "Before I start building — a few quick questions:
+  1. Is this for personal use or a team?
+  2. What problem does it solve for you?
+  3. What does success look like?
+     (Does it need history? Notifications? Export?)"
+
+You: Answer the questions
+
+AI: "Got it. Here's what I understand you need:
+  [Requirements doc — read and confirm]"
+
+You: Confirm or correct
+
+AI: "Now let me search for existing solutions..."
+
+...and so on, step by step.
+```
+
+You stay in control. AI asks → you answer → AI does → you confirm.
+
+---
+
+## Shortcut Command
+
+```
+/idea-to-product [your idea]
+```
+
+One command activates the full workflow. No need to paste long text.
+
+> Note: Requires tools that support slash commands. Claude Code, OpenClaw, and other major tools support this.
 
 ---
 
@@ -110,13 +160,13 @@ That's it. The AI will guide you through the steps.
 
 Any AI coding tool that supports skills, slash commands, or system instructions.
 
-| Tool | How to activate |
-|------|----------------|
-| Claude Code | Put SKILL.md in skills directory |
-| OpenClaw | Tell it: "Follow the idea-to-product skill" |
-| Cursor | Paste SKILL.md content |
-| Trae | Paste SKILL.md as system instructions |
-| Windsurf | Paste SKILL.md as workspace instructions |
+| Tool | How to install |
+|------|---------------|
+| Claude Code | `~/.claude/skills/idea-to-product/SKILL.md` |
+| OpenClaw | `~/.openclaw/skills/idea-to-product/SKILL.md` |
+| Cursor | Settings → Rules → paste SKILL.md |
+| Trae | Settings → AI → System Instructions → paste SKILL.md |
+| Windsurf | Settings → Workspace → paste SKILL.md |
 | Any AI | Copy SKILL.md, paste as first message |
 
 ---

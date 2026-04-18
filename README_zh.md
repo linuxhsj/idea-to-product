@@ -35,17 +35,17 @@ AI 编程工具很强。但没有方法论，结果往往是：代码乱 → 界
 │       (AI 追问：给谁用？解决什么？)          │
 │              ↓                               │
 │  3. 调研竞品                                  │
-│       (GitHub + 联网搜索)                   │
+│       (GitHub + 联网搜索)                    │
 │              ↓                               │
 │  4. 设计界面  (awesome-design规范)          │
 │              ↓                               │
-│  5. 拆解任务  ← /write-plan                │
+│  5. 拆解任务  ← /write-plan                 │
 │       (每步 2-5 分钟)                       │
 │              ↓                               │
-│  6. 分步执行  ← /execute-plan              │
+│  6. 分步执行  ← /execute-plan               │
 │       (每步做完等你确认)                     │
 │              ↓                               │
-│  7. 测试  (TDD + E2E)                      │
+│  7. 测试  (TDD + E2E)                       │
 │              ↓                               │
 │          上线 ✅                             │
 └─────────────────────────────────────────────┘
@@ -73,18 +73,70 @@ AI 编程工具很强。但没有方法论，结果往往是：代码乱 → 界
 
 ---
 
-## 怎么用（1 分钟激活）
+## 快速上手
+
+**第一步 — 安装（30 秒）**
+
+| 工具 | SKILL.md 放哪 |
+|------|--------------|
+| Claude Code | `~/.claude/skills/idea-to-product/SKILL.md` |
+| OpenClaw | `~/.openclaw/skills/idea-to-product/SKILL.md` |
+| Cursor | 设置 → Rules → 粘贴 SKILL.md 内容 |
+| Trae | 设置 → AI → 系统提示 → 粘贴 SKILL.md |
+| Windsurf | 设置 → Workspace → 粘贴 SKILL.md |
+| 任意 AI 工具 | 复制 SKILL.md，粘贴进对话 |
+
+**第二步 — 激活**
+
+打开任意工具，粘贴：
 
 ```
-打开：Claude Code / OpenClaw / Cursor / Trae / Windsurf
-
-把下面这句话发给 AI：
-
-  Follow the idea-to-product skill.
-  My idea: [描述你想做什么]
-
-就行了，AI 会带你走完 7 步。
+Follow the idea-to-product skill.
+My idea: [描述你想做什么]
 ```
+
+就这样，AI 会带你走完 7 步。
+
+---
+
+## 激活后会发生什么
+
+AI 不会上来就写代码。它先问你问题。
+
+**示例 — "我想做一个番茄钟"：**
+
+```
+AI: "开始做之前，我先问几个问题：
+  1. 这是给自己用还是给团队用？
+  2. 它解决你什么问题？
+  3. 怎么算成功？
+     （需要记录历史吗？需要通知吗？需要导出吗？）"
+
+你: 回答问题
+
+AI: "明白了，我理解的需求是：
+  [需求文档 — 你读一遍确认一下]"
+
+你: 确认或纠正
+
+AI: "好，我先去搜一下有没有现成的解决方案..."
+
+...然后一步步往下走
+```
+
+你全程掌控：AI 问 → 你答 → AI 做 → 你确认。
+
+---
+
+## 快捷指令
+
+```
+/idea-to-product [你的想法]
+```
+
+直接一句话激活全套流程，不需要粘贴大段文字。
+
+> 注：快捷指令需要工具支持 slash commands。Claude Code、OpenClaw 等主流工具均支持。
 
 ---
 
@@ -108,13 +160,13 @@ AI 编程工具很强。但没有方法论，结果往往是：代码乱 → 界
 
 支持 skills、斜杠指令或系统提示的 AI 编程工具都能用。
 
-| 工具 | 怎么激活 |
+| 工具 | 安装方式 |
 |------|---------|
-| Claude Code | 把 SKILL.md 放进 skills 目录 |
-| OpenClaw | 告诉它："Follow the idea-to-product skill" |
-| Cursor | 粘贴 SKILL.md 内容 |
-| Trae | 粘贴 SKILL.md 作为系统提示 |
-| Windsurf | 粘贴 SKILL.md 作为工作区说明 |
+| Claude Code | `~/.claude/skills/idea-to-product/SKILL.md` |
+| OpenClaw | `~/.openclaw/skills/idea-to-product/SKILL.md` |
+| Cursor | 设置 → Rules → 粘贴 SKILL.md |
+| Trae | 设置 → AI → 系统提示 → 粘贴 SKILL.md |
+| Windsurf | 设置 → Workspace → 粘贴 SKILL.md |
 | 任意 AI 工具 | 复制 SKILL.md，粘贴进对话 |
 
 > **无需安装**，粘贴即用。

@@ -1,6 +1,6 @@
 ---
 name: idea-to-product
-description: Use when user wants to turn an idea into a shipped product using AI tools, especially after failed attempts with Cursor/Cursor/Claude Code/OpenClaw where output was messy, broken, or ugly
+description: Use when user wants to turn an idea into a shipped product using AI tools — activate this workflow before any code, scaffold, or implementation action
 ---
 
 <SUBAGENT-STOP>
@@ -43,7 +43,7 @@ Never let AI start coding immediately. The order is the method.
 **Do NOT activate for:**
 - Debugging existing code
 - Questions about existing projects
-- This skill's own development (that uses superpowers)
+- This skill's own development
 
 ---
 
@@ -51,9 +51,8 @@ Never let AI start coding immediately. The order is the method.
 
 ```dot
 digraph idea_to_product {
-    rankdir=LR;
     "Idea" -> "Existing tool?\n(Claude/Doubao web search)" -> "Yes → Use it, done";
-    "No or expensive" -> "Clarify\n/superpowers:brainstorm" -> "Competitor research\n(GitHub + web search)" -> "Design UI\n(awesome-design + simple UX)" -> "Break into tasks\n/superpowers:write-plan" -> "Execute step-by-step\n/superpowers:execute-plan" -> "Test\n(TDD + E2E)" -> "Ship";
+    "No or expensive" -> "Clarify\n(/superpowers:brainstorm)" -> "Competitor research\n(GitHub + web search)" -> "Design UI\n(awesome-design + simple UX)" -> "Break into tasks\n(/superpowers:write-plan)" -> "Execute step-by-step\n(/superpowers:execute-plan)" -> "Test\n(TDD + E2E)" -> "Ship";
 }
 ```
 
@@ -70,7 +69,7 @@ Open Claude (claude.ai) or Doubao with web search. Ask:
 
 ### Step 2 — Clarify requirements (HARD-GATE)
 
-Use `/superpowers:brainstorm` in your dev tool. The AI追问:
+Use `/superpowers:brainstorm`. The AI追问:
 - Who is this for?
 - What problem does it solve?
 - What counts as success?
@@ -117,11 +116,11 @@ This skill works in any AI coding tool that supports skills or slash commands.
 
 | Tool | How to use |
 |------|-----------|
-| **Claude Code** | Skills auto-discovered from `~/.claude/skills/` |
-| **OpenClaw** | Tell it: "Follow the idea-to-product skill from ~/.claude/skills/idea-to-product/SKILL.md" |
-| **Cursor** | `/add-plugin idea-to-product` or paste skill content |
-| **Trae** | Paste skill content as system instructions |
-| **Any AI (fallback)** | Copy SKILL.md content, paste into conversation as instructions |
+| **Claude Code** | Skills auto-discovered if placed in skills directory |
+| **OpenClaw** | Tell it: "Follow the idea-to-product skill" |
+| **Cursor** | Paste SKILL.md content, or use plugin manager |
+| **Trae** | Paste SKILL.md as system instructions |
+| **Any AI tool** | Copy SKILL.md content, paste into conversation as instructions |
 
 ---
 

@@ -92,15 +92,15 @@ That's it. The AI will guide you through the steps.
 
 ## What Makes This Different
 
-| | Raw AI | superpowers | get-shit-done | idea-to-product |
-|---|---|---|---|---|
-| Clarify requirements | ❌ | ❌ | ❌ | ✅ Step 2 |
-| Research competitors | ❌ | ❌ | ❌ | ✅ Step 3 |
-| UI design规范 | ❌ | ⚠️ | ❌ | ✅ awesome-design |
-| Testing required | ❌ | ⚠️ | ❌ | ✅ TDD + E2E |
-| Chinese support | ❌ | ❌ | ❌ | ✅ |
-| Learning curve | Low | High | Low | Low |
-| Focus | — | Full dev lifecycle | Execution only | Idea → Shipped |
+| | Raw AI | superpowers | get-shit-done | idea-to-product | Benefit |
+|---|---|---|---|---|---|
+| Clarify requirements | ❌ | ❌ | ❌ | ✅ Step 2 | Know what to build — no rework |
+| Research competitors | ❌ | ❌ | ❌ | ✅ Step 3 | Don't build what already exists |
+| UI design规范 | ❌ | ⚠️ | ❌ | ✅ awesome-design | Professional-looking UI |
+| Testing required | ❌ | ⚠️ | ❌ | ✅ TDD + E2E | Ship with confidence |
+| Chinese support | ❌ | ❌ | ❌ | ✅ | Zero barrier for Chinese users |
+| Learning curve | Low | High | Low | Low | |
+| Focus | — | Full dev lifecycle | Execution only | Idea → Shipped | |
 
 **vs. competitors:** superpowers is too broad, get-shit-done skips planning — idea-to-product sits in the middle with a complete end-to-end path.
 

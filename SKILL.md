@@ -8,7 +8,17 @@ If you were dispatched as a subagent to execute a specific task, skip this skill
 </SUBAGENT-STOP>
 
 <HARD-GATE>
-Do NOT invoke any coding tool, write any code, scaffold any project, or take any implementation action until you have completed Steps 1–7 in order. This applies to EVERY project regardless of perceived simplicity.
+**No step can be skipped. No shortcuts. No "it's small enough".**
+
+The following 5 checkpoints are HARD-GATE — you MUST confirm each before proceeding:
+
+1. **Step 2 — Requirements confirmed** — user reads and approves the requirements doc
+2. **Step 3 — Competitor research done** — you show the learnings table, user approves
+3. **Step 4 — UI design approved** — user reviews the design, confirms direction
+4. **Step 5 — Task plan approved** — user reads and approves the full task breakdown
+5. **Step 7 — Tests pass** — TDD rules written, E2E flow verified
+
+Skipping any of these = restart from Step 1.
 
 **Violating the letter of this rule is violating the spirit of this rule.**
 </HARD-GATE>
@@ -78,6 +88,8 @@ Use `/superpowers:brainstorm`. Ask one question at a time:
 
 **You must read and confirm the requirements doc before proceeding.**
 
+**[HARD-GATE: Do not proceed until user confirms the requirements doc.]**
+
 ### Step 3 — Deep competitor research
 
 This is NOT a quick web search. Clone the top 2-3 competitor repos and study them deeply:
@@ -98,6 +110,8 @@ This is NOT a quick web search. Clone the top 2-3 competitor repos and study the
 
 **Only after this deep research should you move to Step 4.**
 
+**[HARD-GATE: Show the competitor learnings table. Do not proceed until user approves it.]**
+
 ### Step 4 — Design the UI
 
 **Good-looking:** Use awesome-design规范
@@ -117,6 +131,8 @@ This is NOT a quick web search. Clone the top 2-3 competitor repos and study the
 | Show loading states | Leave users guessing if it's working |
 | Empty states with guidance | Blank screens that say nothing |
 | Error messages explain the fix | Generic "Something went wrong" |
+
+**[HARD-GATE: Show the UI design. Do not proceed until user approves the design direction.]**
 
 ### Step 5 — Break into tasks
 
@@ -141,6 +157,8 @@ Example:
 
 **Review and confirm the plan with user before Step 6.**
 
+**[HARD-GATE: Show the full task breakdown with verify fields. Do not proceed until user approves the plan.]**
+
 ### Step 6 — Execute step by step
 
 Use `/superpowers:execute-plan`. For each task:
@@ -162,6 +180,8 @@ Use `/superpowers:execute-plan`. For each task:
 > "Open → type task → click Add → see in list → check Complete → refresh → verify data persists"
 
 **Tip:** Test with 3-5 fake data entries first. Swap real data once logic is solid.
+
+**[HARD-GATE: All TDD tests must pass. E2E flow must run end-to-end without error. Do not ship until both pass.]**
 
 ---
 

@@ -31,21 +31,23 @@ Errors → Ugly UI → More fixes → Give up
 │  1. Existing tool?  ── Yes → Done          │
 │       No / too expensive                     │
 │              ↓                               │
-│  2. Clarify requirements  ← HARD-GATE       │
-│       (brainstorm追问)                       │
+│  2. Clarify requirements  ← HARD-GATE      │
+│       You confirm requirements doc           │
 │              ↓                               │
 │  3. Deep competitor research                │
-│       (Clone repos, run, study code)         │
+│       Clone repos, run, study code           │
 │              ↓                               │
-│  4. Design UI  (awesome-design规范)          │
+│  4. Design UI  ← HARD-GATE                  │
+│       You confirm design direction            │
 │              ↓                               │
-│  5. Break into tasks  ← /write-plan          │
-│       (2-5 min per step)                     │
+│  5. Break into tasks  ← HARD-GATE           │
+│       You approve full task plan             │
 │              ↓                               │
-│  6. Execute step-by-step ← /execute-plan     │
-│       (confirm each step)                    │
+│  6. Execute step-by-step                    │
+│       Confirm each task result               │
 │              ↓                               │
-│  7. Test  (TDD + E2E)                        │
+│  7. Test  ← HARD-GATE                       │
+│       TDD + E2E must both pass              │
 │              ↓                               │
 │          Ship ✅                             │
 └─────────────────────────────────────────────┘

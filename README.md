@@ -75,7 +75,18 @@ The order IS the method. Not optional.
 
 ## Quick Start
 
-**Step 1 — Install (30 seconds)**
+**One-command setup:**
+
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/linuxhsj/idea-to-product/main/install.sh)"
+```
+
+This installs everything automatically:
+- `superpowers` — provides `/superpowers:brainstorm`, `/write-plan`, `/execute-plan`
+- `awesome-design` — UI design spec for professional-looking interfaces
+- `idea-to-product` skill — this workflow
+
+**Manual install (30 seconds):**
 
 | Tool | Where to put SKILL.md |
 |------|-----------------------|
@@ -86,16 +97,18 @@ The order IS the method. Not optional.
 | Windsurf | Settings → Workspace → paste SKILL.md |
 | Any AI | Copy SKILL.md, paste as your first message |
 
-**Step 2 — Activate**
+**Activate:**
 
-Open any tool above and paste:
+```
+/idea-to-product [your idea]
+```
+
+Or paste:
 
 ```
 Follow the idea-to-product skill.
 My idea: [describe what you want to build]
 ```
-
-That's it. The AI will guide you through every step.
 
 ---
 

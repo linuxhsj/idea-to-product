@@ -75,7 +75,18 @@ AI 编程工具很强。但没有方法论，结果往往是：代码乱 → 界
 
 ## 快速上手
 
-**第一步 — 安装（30 秒）**
+**一行命令搞定（推荐）：**
+
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/linuxhsj/idea-to-product/main/install.sh)"
+```
+
+自动安装全部依赖：
+- `superpowers` — 提供 `/superpowers:brainstorm`、`/write-plan`、`/execute-plan`
+- `awesome-design` — UI 设计规范，让 AI 输出专业界面
+- `idea-to-product` skill — 这套工作流
+
+**手动安装（30 秒）：**
 
 | 工具 | SKILL.md 放哪 |
 |------|--------------|
@@ -86,16 +97,18 @@ AI 编程工具很强。但没有方法论，结果往往是：代码乱 → 界
 | Windsurf | 设置 → Workspace → 粘贴 SKILL.md |
 | 任意 AI 工具 | 复制 SKILL.md，粘贴进对话 |
 
-**第二步 — 激活**
+**激活方式：**
 
-打开任意工具，粘贴：
+```
+/idea-to-product [你的想法]
+```
+
+或粘贴：
 
 ```
 Follow the idea-to-product skill.
 My idea: [描述你想做什么]
 ```
-
-就这样，AI 会带你走完 7 步。
 
 ---
 

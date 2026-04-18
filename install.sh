@@ -6,23 +6,15 @@ set -e
 
 echo "Setting up idea-to-product..."
 
-# 1. Clone only the needed superpowers skills (not the full repo)
-mkdir -p ~/.claude/skills/superpowers
-
-BASE_URL="https://raw.githubusercontent.com/obra/superpowers/main/skills"
-
-for skill in brainstorming writing-plans executing-plans; do
-    TARGET="$HOME/.claude/skills/superpowers/${skill}"
-    if [ -d "$TARGET" ]; then
-        echo "✓ superpowers:${skill} already installed"
-    else
-        echo "→ Installing superpowers:${skill}..."
-        mkdir -p "$TARGET"
-        curl -fsSL "$BASE_URL/${skill}/SKILL.md" -o "$TARGET/SKILL.md" 2>/dev/null && \
-            echo "✓ superpowers:${skill} installed" || \
-            echo "⚠️  Failed to install superpowers:${skill} — check network"
-    fi
-done
+# 1. Clone superpowers (full repo — 14 skills, all needed for cross-references)
+if [ -d ~/.claude/skills/superpowers ]; then
+    echo "✓ superpowers already installed"
+else
+    echo "→ Cloning superpowers..."
+    mkdir -p ~/.claude/skills
+    git clone --depth 1 https://github.com/obra/superpowers.git ~/.claude/skills/superpowers
+    echo "✓ superpowers installed"
+fi
 
 # 2. Install idea-to-product skill
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -43,6 +35,13 @@ if [ -f ~/.claude/skills/idea-to-product/SKILL.md ]; then
     echo "✓ idea-to-product skill found"
 else
     echo "✗ idea-to-product skill MISSING"
+fi
+
+SUPERPOWER_COUNT=$(find ~/.claude/skills/superpowers/skills -name "SKILL.md" 2>/dev/null | wc -l | tr -d ' ')
+if [ "$SUPERPOWER_COUNT" -gt 0 ]; then
+    echo "✓ superpowers ($SUPERPOWER_COUNT skills) found"
+else
+    echo "⚠️  superpowers skills not found — check network"
 fi
 
 echo ""

@@ -7,14 +7,14 @@ description: Use when user wants to turn an idea into a shipped product — acti
 
 **Announce:** "I'm using the idea-to-product skill."
 
-**5 HARD-GATE checkpoints — you MUST confirm each before proceeding:**
-1. Requirements doc (Step 2)
-2. Competitor learnings table (Step 3)
-3. UI design direction (Step 4)
-4. Task plan with verify fields (Step 5)
-5. All tests pass (Step 7)
+**Two absolute HARD-GATEs — no exceptions:**
+- Step 2 — Requirements: Must追问, user must confirm
+- Step 7 — Testing: TDD + E2E, both must pass before shipping
 
-**Do not write any code until all 5 checkpoints are confirmed.**
+**Three flexible HARD-GATEs — must do, but user can choose approach:**
+- Step 3 — Competitor research: Must do. User can set focus criteria.
+- Step 4 — UI design: Must do. User can use their own spec instead of awesome-design.
+- Step 5 — Task plan: Must do. User can choose format.
 
 ---
 
@@ -22,11 +22,10 @@ description: Use when user wants to turn an idea into a shipped product — acti
 
 Ask: "Before we build — is there free software that already does [the idea]?"
 
-- Search claude.ai or doubao.com with web search
 - If yes → done, use it. No build needed.
 - If no or too expensive → proceed to Step 2.
 
-## Step 2 — Clarify requirements (HARD-GATE)
+## Step 2 — Clarify requirements (HARD-GATE, absolute)
 
 Use `superpowers:brainstorming`. Ask one question at a time:
 - Who is this for?
@@ -39,28 +38,37 @@ Write the requirements into `PROJECT.md`.
 
 ## Step 3 — Deep competitor research (HARD-GATE)
 
-Clone top 2-3 GitHub repos for similar products.
-Run each one. Read the code. Study what they do well and poorly.
+Must be done. Prioritize repos with:
+- Stars ≥ 1k (higher = more community validated)
+- Updated in last 6 months
+- Active issues and discussion
 
-Write a learnings table:
+Clone top 2-3 matching repos. Run them. Read the code.
+Write learnings table:
 
-| Competitor | Strengths | Weaknesses | What we'll borrow | What we'll avoid |
-|------------|-----------|------------|-------------------|-----------------|
+| Competitor | Stars | Last updated | What it does well | What it does poorly | What we'll borrow | What we'll avoid |
+|------------|-------|-------------|-------------------|---------------------|-------------------|-----------------|
+
+User can add focus criteria: e.g. "focus on mobile-first repos only"
 
 **[HARD-GATE: Show the learnings table. Do not proceed until user approves it.]**
 
 ## Step 4 — Design UI (HARD-GATE)
 
-Open awesome-design: https://github.com/VoltAgent/awesome-design-md
-Apply the design spec + Do's & Don'ts.
+Must be done. User can bring their own design spec.
 
-Add constraint: "Core actions within 3 steps, ≤5 menu items, plain-language buttons"
+- If user has a spec → follow it exactly
+- If no spec → use awesome-design by default
+
+Always add: "Core actions within 3 steps, ≤5 menu items, plain-language buttons"
+
+Do's & Don'ts apply to every design regardless of spec source.
 
 **[HARD-GATE: Show the UI design. Do not proceed until user approves the design direction.]**
 
 ## Step 5 — Break into tasks (HARD-GATE)
 
-Use `superpowers:writing-plans`. Each task MUST have:
+Use `superpowers:writing-plans`. Each task:
 - `name:` — what to do
 - `action:` — exact instructions
 - `verify:` — how to confirm it works
@@ -70,10 +78,9 @@ Use `superpowers:writing-plans`. Each task MUST have:
 
 ## Step 6 — Execute step by step
 
-Use `superpowers:executing-plans` or `superpowers:subagent-driven-development`.
-For each task: do it → run verify → show result → user confirms → next.
+Do task → run verify → show result → user confirms → next.
 
-## Step 7 — Test (HARD-GATE)
+## Step 7 — Test (HARD-GATE, absolute)
 
 TDD: write test rules before coding.
 E2E: run full user journey before shipping.

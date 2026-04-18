@@ -8,17 +8,20 @@ If you were dispatched as a subagent to execute a specific task, skip this skill
 </SUBAGENT-STOP>
 
 <HARD-GATE>
-**No step can be skipped. No shortcuts. No "it's small enough".**
+**Two steps are absolute — no exceptions, no alternatives:**
 
-The following 5 checkpoints are HARD-GATE — you MUST confirm each before proceeding:
+- **Step 2 — Requirements (HARD-GATE):** Must be done. No way around it. AI must追问 and user must confirm.
+- **Step 7 — Testing (HARD-GATE):** Must be done. TDD + E2E. Both must pass before shipping.
 
-1. **Step 2 — Requirements confirmed** — user reads and approves the requirements doc
-2. **Step 3 — Competitor research done** — you show the learnings table, user approves
-3. **Step 4 — UI design approved** — user reviews the design, confirms direction
-4. **Step 5 — Task plan approved** — user reads and approves the full task breakdown
-5. **Step 7 — Tests pass** — TDD rules written, E2E flow verified
+**Three steps are mandatory but allow user preference:**
 
-Skipping any of these = restart from Step 1.
+- **Step 3 — Competitor research (HARD-GATE):** Must be done. But user can set their own criteria (e.g. "focus on mobile apps only", "prioritize open-source only").
+- **Step 4 — UI design (HARD-GATE):** Must be done. But user can use their own design spec instead of awesome-design — just say "use [your spec]" and the AI will follow that.
+- **Step 5 — Task plan (HARD-GATE):** Must be done. But user can choose the planning format.
+
+**Step 1 and Step 6 have no gates.**
+
+Skipping any HARD-GATE step = restart from Step 1.
 
 **Violating the letter of this rule is violating the spirit of this rule.**
 </HARD-GATE>
@@ -62,9 +65,11 @@ Never let AI start coding immediately. The order is the method.
 ```dot
 digraph idea_to_product {
     "Idea" -> "Existing tool?\n(claude.ai / doubao.com)" -> "Yes → Use it, done";
-    "No or expensive" -> "Clarify\n(/superpowers:brainstorm)" -> "Deep competitor research\n(Clone + analyze repos)" -> "Design UI\n(awesome-design + simple UX)" -> "Break into tasks\nwith verify field" -> "Execute step-by-step\n(/superpowers:execute-plan)" -> "Test\n(TDD + E2E)" -> "Ship";
+    "No or expensive" -> "Clarify\n(HARD-GATE ✓)" -> "Deep competitor research\n(Clone + analyze repos)\n(HARD-GATE ✓)" -> "Design UI\n(your spec or awesome-design)\n(HARD-GATE ✓)" -> "Break into tasks\nwith verify field\n(HARD-GATE ✓)" -> "Execute step-by-step\n(/superpowers:execute-plan)" -> "Test\n(TDD + E2E)\n(HARD-GATE ✓)" -> "Ship";
 }
 ```
+
+**Legend:** HARD-GATE ✓ = mandatory, must confirm before proceeding.
 
 ---
 
@@ -90,36 +95,45 @@ Use `/superpowers:brainstorm`. Ask one question at a time:
 
 **[HARD-GATE: Do not proceed until user confirms the requirements doc.]**
 
-### Step 3 — Deep competitor research
+### Step 3 — Deep competitor research (HARD-GATE)
 
-This is NOT a quick web search. Clone the top 2-3 competitor repos and study them deeply:
+This is NOT a quick web search. Must be done. Clone repos and study deeply.
+
+**Competitor selection criteria — prioritize repos with ALL of:**
+- GitHub stars: ≥ 1k (higher = more validated by community)
+- Recent activity: updated in the last 6 months
+- Positive reception: issues being closed, active discussion, good readme
 
 **Research protocol:**
-1. Identify 2-3 top GitHub repos for similar products (high stars, recent updates)
-2. Clone each repo: `git clone <repo-url>`
-3. Read the full README — understand why it was built this way
-4. Read the source code structure: `find . -name "*.py" -o -name "*.ts" -o -name "*.js" | head -20`
-5. Run it: `npm install && npm run dev` or equivalent
-6. Identify what it does well → **learn from it**
-7. Identify what it does poorly → **avoid repeating those mistakes**
-8. Write a comparison table:
+1. Search GitHub for similar products, rank by stars + recency + activity
+2. Select top 2-3 repos matching the criteria above
+3. Clone each repo: `git clone <repo-url>`
+4. Read the full README — understand why it was built this way
+5. Read the source code structure: `find . -name "*.py" -o -name "*.ts" -o -name "*.js" | head -20`
+6. Run it: `npm install && npm run dev` or equivalent
+7. Identify what it does well → **learn from it**
+8. Identify what it does poorly → **avoid repeating those mistakes**
+9. Write a comparison table:
 
-| Competitor | Strengths | Weaknesses | What we'll borrow | What we'll avoid |
-|------------|-----------|------------|-------------------|-----------------|
-| [repo-name] | ... | ... | ... | ... |
+| Competitor | Stars | Last updated | What it does well | What it does poorly | What we'll borrow | What we'll avoid |
+|------------|-------|-------------|-------------------|---------------------|-------------------|-----------------|
 
 **Only after this deep research should you move to Step 4.**
 
 **[HARD-GATE: Show the competitor learnings table. Do not proceed until user approves it.]**
 
-### Step 4 — Design the UI
+### Step 4 — Design the UI (HARD-GATE)
 
-**Good-looking:** Use awesome-design规范
+Must be done. User can bring their own design spec.
+
+**If user has a design spec:** Say "use [your spec]" — AI will follow it exactly.
+
+**If no spec provided:** Use awesome-design as default:
 - Clone or open: https://github.com/VoltAgent/awesome-design-md
 - Copy the relevant DESIGN.md content, paste to AI
 - Say: "Design [app] following these guidelines"
 
-**Easy to use:** Add constraint:
+**Regardless of spec source, always add:**
 > "Core actions within 3 steps, ≤5 menu items, plain-language buttons"
 
 **Do's and Don'ts — apply these to every design:**
@@ -206,7 +220,10 @@ Create `PROJECT.md` at project root after Step 2. Keep it updated through Step 7
 [From Step 3 — borrow X, avoid Y]
 
 ## Design direction
-[From Step 4 — key UI decisions]
+[From Step 4 — key UI decisions, or user's own design spec]
+
+## Design spec
+[awesome-design default, or user's preferred spec — e.g. "use Material Design"]
 
 ## Status
 - [ ] Step 1: Existing tools checked

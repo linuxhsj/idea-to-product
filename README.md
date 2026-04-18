@@ -1,3 +1,5 @@
+**中文**：[README_zh.md](./README_zh.md)
+
 # Idea to Product
 
 **Turn your idea into a shipped product — without the chaos.**

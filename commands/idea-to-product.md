@@ -55,10 +55,13 @@ User can add focus criteria: e.g. "focus on mobile-first repos only"
 
 ## Step 4 — Design UI (HARD-GATE)
 
-Must be done. User can bring their own design spec.
+Must be done. Ask user to pick an aesthetic.
 
 - If user has a spec → follow it exactly
-- If no spec → use awesome-design by default
+- If no spec → ask user to pick from awesome-design's 68 options:
+  https://github.com/VoltAgent/awesome-design-md
+
+Common choices: "clean/minimal" → Vercel/Linear, "SaaS" → a SaaS design, etc.
 
 Always add: "Core actions within 3 steps, ≤5 menu items, plain-language buttons"
 

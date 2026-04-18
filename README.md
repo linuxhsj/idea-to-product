@@ -77,40 +77,28 @@ The order IS the method. Not optional.
 
 ## Quick Start
 
-**One-command setup:**
+**Step 1 — Install (30 seconds):**
 
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/linuxhsj/idea-to-product/main/install.sh)"
 ```
 
-This installs everything automatically:
-- `superpowers` — provides `/superpowers:brainstorm`, `/write-plan`, `/execute-plan`
-- `awesome-design` — UI design spec for professional-looking interfaces
-- `idea-to-product` skill — this workflow
+This installs: `superpowers:brainstorm` + `superpowers:writing-plans` + `superpowers:executing-plans` + `idea-to-product` skill. No other dependencies needed. awesome-design is referenced in SKILL.md when needed.
 
 **Manual install (30 seconds):**
 
-| Tool | Where to put SKILL.md |
-|------|-----------------------|
-| Claude Code | `~/.claude/skills/idea-to-product/SKILL.md` |
-| OpenClaw | `~/.openclaw/skills/idea-to-product/SKILL.md` |
-| Cursor | Settings → Rules → paste SKILL.md content |
-| Trae | Settings → AI → System Instructions → paste SKILL.md |
-| Windsurf | Settings → Workspace → paste SKILL.md |
-| Any AI | Copy SKILL.md, paste as your first message |
+Create `~/.claude/skills/idea-to-product/` and put `SKILL.md` inside.
 
-**Activate:**
+**Step 2 — Activate (pick your tool):**
 
-```
-/idea-to-product [your idea]
-```
-
-Or paste:
-
-```
-Follow the idea-to-product skill.
-My idea: [describe what you want to build]
-```
+| Tool | How to activate |
+|------|----------------|
+| **Claude Code** | Skills auto-discovered — just type `/idea-to-product [your idea]` |
+| **OpenClaw** | Type `/idea-to-product [your idea]` |
+| **Cursor** | Settings → Rules → paste SKILL.md content |
+| **Trae** | Settings → AI → paste SKILL.md as system instructions |
+| **Windsurf** | Settings → Workspace → paste SKILL.md |
+| **Any AI** | Paste SKILL.md content as your first message |
 
 ---
 

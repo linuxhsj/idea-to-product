@@ -77,24 +77,28 @@ AI 编程工具很强。但没有方法论，结果往往是：代码乱 → 界
 
 ## 快速上手
 
-**一行命令搞定（推荐）：**
+**第一步 — 安装（30 秒）：**
 
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/linuxhsj/idea-to-product/main/install.sh)"
 ```
 
-自动安装全部依赖：
-- `superpowers` — 提供 `/superpowers:brainstorm`、`/write-plan`、`/execute-plan`
-- `awesome-design` — UI 设计规范，让 AI 输出专业界面
-- `idea-to-product` skill — 这套工作流
+自动安装：`superpowers:brainstorm` + `superpowers:writing-plans` + `superpowers:executing-plans` + `idea-to-product` skill。无需其他依赖。awesome-design 在 SKILL.md 里有说明，需要时按需使用。
 
 **手动安装（30 秒）：**
 
-| 工具 | SKILL.md 放哪 |
-|------|--------------|
-| Claude Code | `~/.claude/skills/idea-to-product/SKILL.md` |
-| OpenClaw | `~/.openclaw/skills/idea-to-product/SKILL.md` |
-| Cursor | 设置 → Rules → 粘贴 SKILL.md 内容 |
+创建 `~/.claude/skills/idea-to-product/`，把 SKILL.md 放进去。
+
+**第二步 — 激活（选你的工具）：**
+
+| 工具 | 如何激活 |
+|------|---------|
+| **Claude Code** | Skills 自动识别，直接输入 `/idea-to-product [你的想法]` |
+| **OpenClaw** | 输入 `/idea-to-product [你的想法]` |
+| **Cursor** | 设置 → Rules → 粘贴 SKILL.md 内容 |
+| **Trae** | 设置 → AI → 粘贴 SKILL.md 作为系统提示 |
+| **Windsurf** | 设置 → Workspace → 粘贴 SKILL.md |
+| **任意 AI** | 复制 SKILL.md 内容，粘贴进对话 |
 | Trae | 设置 → AI → 系统提示 → 粘贴 SKILL.md |
 | Windsurf | 设置 → Workspace → 粘贴 SKILL.md |
 | 任意 AI 工具 | 复制 SKILL.md，粘贴进对话 |

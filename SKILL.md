@@ -124,24 +124,31 @@ This is NOT a quick web search. Must be done. Clone repos and study deeply.
 
 ### Step 4 — Design the UI (HARD-GATE)
 
-Must be done. User can bring their own design spec.
+Must be done. Ask user about their preferred aesthetic.
 
-**If user has a design spec:** Say "use [your spec]" — AI will follow it exactly.
+**If user has a design spec:** Use it exactly.
 
-**If no spec provided:** Use awesome-design as default:
-- Clone or open: https://github.com/VoltAgent/awesome-design-md
-- Copy the relevant DESIGN.md content, paste to AI
-- Say: "Design [app] following these guidelines"
+**If no spec provided:** Ask user to pick an aesthetic, then apply the matching DESIGN.md from awesome-design:
 
-**Regardless of spec source, always add:**
+> awesome-design-md is a curated collection of 68 real website design specs. Browse: https://github.com/VoltAgent/awesome-design-md
+>
+> Pick the one closest to your desired style, copy its content, and tell AI: "Design [app] following these guidelines."
+
+**Common aesthetic options to guide the user:**
+- "Clean/minimal" → pick Vercel, Linear, or Resend's design
+- "Colorful/playful" → pick a brand-forward design
+- "Dark mode first" → pick a dark-mode-heavy design
+- "Startups/SaaS" → pick a SaaS product design
+
+**Regardless of spec source, always enforce:**
 > "Core actions within 3 steps, ≤5 menu items, plain-language buttons"
 
-**Do's and Don'ts — apply these to every design:**
+**Do's and Don'ts — apply to every design:**
 
 | Do ✅ | Don't ❌ |
 |-------|---------|
 | Use consistent spacing (8px grid) | Mix pixel values arbitrarily |
-| Name buttons by action: "Save", "Delete" | Abstract names: "Submit", "Process" |
+| Name buttons by action: "Save", "Delete", "Search" | Abstract names: "Submit", "Process" |
 | Show loading states | Leave users guessing if it's working |
 | Empty states with guidance | Blank screens that say nothing |
 | Error messages explain the fix | Generic "Something went wrong" |

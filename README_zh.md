@@ -83,7 +83,7 @@ AI 编程工具很强。但没有方法论，结果往往是：代码乱 → 界
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/linuxhsj/idea-to-product/main/install.sh)"
 ```
 
-自动安装：`superpowers:brainstorm` + `superpowers:writing-plans` + `superpowers:executing-plans` + `idea-to-product` skill。无需其他依赖。awesome-design 在 SKILL.md 里有说明，需要时按需使用。
+自动安装：`superpowers`（完整仓库，14个skill）+ `awesome-design`（68个设计规范）+ `idea-to-product` skill。
 
 **手动安装（30 秒）：**
 

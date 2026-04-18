@@ -83,7 +83,7 @@ The order IS the method. Not optional.
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/linuxhsj/idea-to-product/main/install.sh)"
 ```
 
-This installs: `superpowers` (full repo, 14 skills) + `idea-to-product` skill. awesome-design is referenced in SKILL.md when needed — no separate install required.
+This installs: `superpowers` (full repo, 14 skills) + `awesome-design` (68 design specs) + `idea-to-product` skill.
 
 **Manual install (30 seconds):**
 
